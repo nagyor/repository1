@@ -1,16 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        import java.util.Scanner;
+        Questao q1 = new Questao();
+        q1.pergunta = "Qual é a capital da França?";
+        q1.opcaoA = "A) Londres";
+        q1.opcaoB = "B) Paris";
+        q1.opcaoC = "C) Roma";
+        q1.opcaoD = "D) Berlim";
+        q1.opcaoE = "E) Madri";
+        q1.correta = "B";
 
-public class Questao {
-    String pergunta = "";
-    String opcaoA = "";
-    String opcaoB = "";
-    String opcaoC = "";
-    String opcaoD = "";
-    String opcaoE = "";
-    String correta = "";
+        q1.escrevaQuestao();
+        String resposta = q1.leiaResposta();
+        q1.isCorreta(resposta);
+    }
+}
 
     public boolean isCorreta(String resposta){
         if(resposta.equalsIgnoreCase(this.correta)){
